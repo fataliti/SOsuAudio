@@ -1,0 +1,38 @@
+﻿<Window x:Class="SOsuAudio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SOsuAudio"
+        mc:Ignorable="d"
+        Closed="Window_Closed"
+        Title="SOsuParser" Height="540" Width="960">
+    <Grid Background="#7a93c8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="506*"/>
+        </Grid.RowDefinitions>
+        <Button Content="FROM" HorizontalAlignment="Left" Margin="824,7.048,0,0" VerticalAlignment="Top" Width="118" Background="White" Height="26" Click="SelectOsuSongsFolder" Grid.Row="1" />
+        <Label Background="White" Content="WHERE OSU SONGS" HorizontalAlignment="Left" Margin="10,7.048,0,0" VerticalAlignment="Top" Width="796" Name="osuPath" Grid.Row="1"/>
+        <Button Content="TO" HorizontalAlignment="Left" Margin="824,38.048,0,0" VerticalAlignment="Top" Width="118" Background="White" Height="26" Click="SelectTransferSongsFolder" Grid.Row="1"/>
+        <Label Background="White" Content="COPY TO" HorizontalAlignment="Left" Margin="10,38.048,0,0" VerticalAlignment="Top" Width="796" Name="transPath" Grid.Row="1"/>
+        <DatePicker HorizontalAlignment="Left" Margin="153,89.048,0,0" VerticalAlignment="Top" Width="148" Name="dateAfter" Grid.Row="1"/>
+        <Label Background="White" Content="AFTER SOME DATE ?" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Width="130" Grid.Row="1"/>
+        <CheckBox Content="Standart" HorizontalAlignment="Left" Margin="16,212,0,0" VerticalAlignment="Top" Name="std" Grid.Row="1"/>
+        <CheckBox Content="Mania" HorizontalAlignment="Left" Margin="16,232,0,0" VerticalAlignment="Top" Name="mania" Grid.Row="1"/>
+        <CheckBox Content="Taiko" HorizontalAlignment="Left" Margin="16,252,0,0" VerticalAlignment="Top" Name="taiko" Grid.Row="1"/>
+        <CheckBox Content="Catch" HorizontalAlignment="Left" Margin="16,272,0,0" VerticalAlignment="Top" Width="53" Name="catch" Grid.Row="1"/>
+        <Button Background="White" Content="GET EM " HorizontalAlignment="Left" Margin="153,217,0,0" VerticalAlignment="Top" Width="113" Height="39" FontSize="24" Click="TransferSongs" Grid.Row="1"/>
+        <DatePicker HorizontalAlignment="Left" Margin="153,133,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="148" Name="dateBefore"/>
+        <Label Background="White" Content="BEFORE SOME DATE ?" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" Width="130" Grid.Row="1" />
+        <Button Content="RESET" HorizontalAlignment="Left" Margin="329,87,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="26" Background="White" Click="resedDateAfter"/>
+        <Button Content="RESET" HorizontalAlignment="Left" Margin="329,132,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="26" Background="White" Click="resedDateBefore"/>
+        <ProgressBar HorizontalAlignment="Left" Height="16" Margin="153,262,0,0" Grid.Row="1" VerticalAlignment="Top" Width="113"  Value="0" Maximum="1" Name="bar"/>
+        <TextBlock HorizontalAlignment="Left" Margin="153,262,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Name="barCount" Width="113" TextAlignment="Center"/>
+        <Image MouseDown="Image_MouseDown" Cursor="Hand" HorizontalAlignment="Left" Height="167" Margin="772,339,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Source="rgd.png"/>
+
+
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Margin="329,478,379,0" Grid.Row="1" TextWrapping="Wrap" Text="simple tool which copy songs from osu" VerticalAlignment="Top" Width="244"/>
+
+    </Grid>
+</Window>
